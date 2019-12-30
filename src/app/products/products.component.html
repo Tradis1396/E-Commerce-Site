@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-xl-4">
+        <div class="card" style="width: 18rem;">
+            <img src="{{image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{productName}}</h5>
+                <p class="card-text">{{description}}.</p>
+                <span class="badge badge-pill badge-light">Varients <span class="float-right ml-5 ">base Price:
+                        {{basePrice}}</span></span><br><br>
+                <div *ngFor="let varient of type">
+                    <span class="badge badge-pill badge-light mt-3">{{varient.type}}</span>
+                    <span class="float-right"><button *ngFor="let value of varient.values" (click)="onSave($event, productName,varient.type,value)"
+                            class="btn btn-outline-dark btn-sm mr-1 active" type="button" role="button"
+                            aria-pressed="true" value="value" id="{{value}}">{{value}}</button></span>
+                    <br>
+                </div><br>
+                <button class="btn btn-outline-dark btn-lg mr-1 active" type="button" role="button"
+                    aria-pressed="true">ADD TO CART</button>
+            </div>
+        </div>
+    </div>
+</div>

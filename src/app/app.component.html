@@ -1,0 +1,23 @@
+
+<div class="jumbotron">
+  value
+</div>
+<div class="container-fluid">
+    <div class="col-xl-12" >
+      <div class="row">
+
+      <div class="col-xl-4" *ngFor = "let list of newList " >
+
+ <app-products 
+ [productName] = "list.productName" 
+ [image] = "list.image" 
+ [description] = "list.description"
+ [basePrice] = "list.basePrice"
+ [type] = "list.varients"
+
+ >
+</app-products>
+  </div>
+</div>
+</div>
+</div>
